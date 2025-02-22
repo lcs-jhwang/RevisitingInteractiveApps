@@ -5,7 +5,7 @@
  
 import SwiftUI
  
-struct ContentView: View {
+struct SquaredView: View {
     
     // MARK: Stored properties
     @State var base: Int = 1
@@ -46,6 +46,6 @@ struct ContentView: View {
 }
  
 #Preview {
-    ContentView()
+    SquaredView()
 }
  
