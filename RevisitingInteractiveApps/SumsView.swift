@@ -15,7 +15,9 @@ struct SumsView: View {
     
     //MARK: Computed properties
     
-    
+    var sum: Int{
+        return firstNumber + secondNumber
+    }
     
     var body: some View {
         VStack{
@@ -37,6 +39,14 @@ struct SumsView: View {
             Stepper(value: $secondNumber, label: {
                 Text("Second Number")
             })
+            
+            HStack{
+                Spacer()
+                Text("\(sum)")
+                    .font(.system(size: 96))
+                    .padding()
+            }
+            
         }
     }
 }
