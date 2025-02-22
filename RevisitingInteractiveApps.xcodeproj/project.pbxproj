@@ -11,6 +11,7 @@
 		31EC58082D695AFE00C697DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31EC58032D695AFE00C697DE /* Assets.xcassets */; };
 		31EC58092D695AFE00C697DE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EC58042D695AFE00C697DE /* ContentView.swift */; };
 		31EC580A2D695AFE00C697DE /* RevisitingInteractiveAppsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EC58052D695AFE00C697DE /* RevisitingInteractiveAppsApp.swift */; };
+		31EC580C2D695C5E00C697DE /* SumsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EC580B2D695C5E00C697DE /* SumsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		31EC58032D695AFE00C697DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31EC58042D695AFE00C697DE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		31EC58052D695AFE00C697DE /* RevisitingInteractiveAppsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisitingInteractiveAppsApp.swift; sourceTree = "<group>"; };
+		31EC580B2D695C5E00C697DE /* SumsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				31EC58022D695AFE00C697DE /* Preview Content */,
 				31EC58032D695AFE00C697DE /* Assets.xcassets */,
 				31EC58042D695AFE00C697DE /* ContentView.swift */,
+				31EC580B2D695C5E00C697DE /* SumsView.swift */,
 				31EC58052D695AFE00C697DE /* RevisitingInteractiveAppsApp.swift */,
 			);
 			path = RevisitingInteractiveApps;
@@ -142,6 +145,7 @@
 			files = (
 				31EC58092D695AFE00C697DE /* ContentView.swift in Sources */,
 				31EC580A2D695AFE00C697DE /* RevisitingInteractiveAppsApp.swift in Sources */,
+				31EC580C2D695C5E00C697DE /* SumsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
