@@ -15,10 +15,7 @@ struct SumsView: View {
     
     //MARK: Computed properties
     
-    var sum: Int{
-        return firstNumber + secondNumber
-    }
-    
+        
     var body: some View {
         VStack{
             HStack{
@@ -42,7 +39,7 @@ struct SumsView: View {
             
             HStack{
                 Spacer()
-                Text("\(sum)")
+                Text("\(Sum.result)")
                     .font(.system(size: 96))
                     .padding()
             }
