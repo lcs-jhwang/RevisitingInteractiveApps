@@ -10,40 +10,46 @@ import SwiftUI
 struct SumsView: View {
     
     //MARK: Stored properties
-    @State var firstNumber: Int = 1
-    @State var secondNumber: Int = 2
+    @State var viewModel = SumsViewModel()
     
     //MARK: Computed properties
     
         
     var body: some View {
         VStack{
-            HStack{
-                Spacer()
-                Text("\(firstNumber)")
+            if let sum = viewModel.sum {
+                HStack{
+                    Spacer()
+                    Text("\(sum.firstNumber)")
+                        .font(.system(size: 96))
+                        .padding()
+                }
+                Text("\(sum.result)")
                     .font(.system(size: 96))
                     .padding()
+                
+                HStack{
+                    Spacer()
+                    Text("\(sum.secondNumber)")
+                        .font(.system(size: 96))
+                        .padding()
+                }
+                HStack{
+                    Spacer()
+                    Text(")")
+                        .font(.system(size: 96))
+                        .padding()
+                }
+            } else {
+                // Show content unavailable view
+                ContentUnavailableView("Unable to calculate", systemImage: "sun", description: Text(viewModel.recoverySuggestion))
             }
-            Stepper(value: $firstNumber, label: {
-                Text("First Number")
-            })
-            HStack{
-                Spacer()
-                Text("\(secondNumber)")
-                    .font(.system(size: 96))
-                    .padding()
-            }
-            Stepper(value: $secondNumber, label: {
-                Text("Second Number")
-            })
             
-            HStack{
-                Spacer()
-                Text("\(Sum.result)")
-                    .font(.system(size: 96))
-                    .padding()
-            }
+
+            TextField("Enter first number", text: $viewModel.providedFirstNumber)
             
+            TextField("Enter second number", text: $viewModel.providedSecondNumber)
+
         }
     }
 }

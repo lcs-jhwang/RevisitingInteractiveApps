@@ -9,12 +9,12 @@
 import Foundation
 
 struct Sum {
-    var firstNumber: Double
-    var secondNumber: Double
+    var firstNumber: Int
+    var secondNumber: Int
     
-    var result: Double {
+    var result: Int {
         
-        var solution = 0.0
+        var solution = 0
         solution = firstNumber + secondNumber
         return solution
         

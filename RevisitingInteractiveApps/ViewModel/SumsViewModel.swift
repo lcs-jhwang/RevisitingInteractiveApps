@@ -15,13 +15,13 @@ class SumsViewModel {
     var recoverySuggestion: String
     
     var sum: Sum? {
-        guard let firstNumber = Double(providedFirstNumber), firstNumber != Double() else {
+        guard let firstNumber = Int(providedFirstNumber), firstNumber != Int() else {
             recoverySuggestion = "Please provide a numeric value for the first number"
             
             return nil
         }
         
-        guard let secondNumber = Double(providedSecondNumber), secondNumber != Double() else {
+        guard let secondNumber = Int(providedSecondNumber), secondNumber != Int() else {
             recoverySuggestion = "Please provide a numeric value for the second number"
             
             return nil
