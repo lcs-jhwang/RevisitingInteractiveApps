@@ -10,46 +10,52 @@ import SwiftUI
 struct DifferencesView: View {
     
     //MARK: Stored properties
-    @State var firstNumber: Int = 1
-    @State var secondNumber: Int = 2
+    @State var viewModel = DifferencesViewModel()
     
     //MARK: Computed properties
     
-    var sum: Int{
-        return firstNumber - secondNumber
-    }
     
     var body: some View {
         VStack{
-            HStack{
-                Spacer()
-                Text("\(firstNumber)")
-                    .font(.system(size: 96))
-                    .padding()
+            if let differences = viewModel.differences {
+                HStack{
+                    Spacer()
+                    Text("\(differences.firstNumber)")
+                        .font(.system(size: 96))
+                        .padding()
+                }
+                
+                HStack{
+                    Spacer()
+                    Text("\(differences.secondNumber)")
+                        .font(.system(size: 96))
+                        .padding()
+                    
+                }
+                HStack{
+                    Text("-")
+                        .font(.system(size: 96))
+                        .padding()
+                    Spacer()
+                    Text("\(differences.result)")
+                        .font(.system(size: 96))
+                        .padding()
+                }
+                
             }
-            Stepper(value: $firstNumber, label: {
-                Text("First Number")
-            })
-            HStack{
-                Text("-")
-                    .font(.system(size: 96))
-                    .padding()
-                Spacer()
-                Text("\(secondNumber)")
-                    .font(.system(size: 96))
-                    .padding()
+            else {
+                // Show content unavailable view
+                ContentUnavailableView("Unable to calculate", systemImage: "sun", description: Text(viewModel.recoverySuggestion))
             }
-            Stepper(value: $secondNumber, label: {
-                Text("Second Number")
-            })
             
-            HStack{
-                Spacer()
-                Text("\(sum)")
-                    .font(.system(size: 96))
-                    .padding()
-            }
             
+            TextField("Enter first number", text: $viewModel.providedFirstNumber)
+                .padding()
+                .font(.system(size: 40))
+            
+            TextField("Enter second number", text: $viewModel.providedSecondNumber)
+                .padding()
+                .font(.system(size: 40))
         }
     }
 }
