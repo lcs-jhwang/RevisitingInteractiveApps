@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct MainView: View {
+    
+    @State var selectedTab: Int = 1
+    
     var body: some View {
-        TabView(selection: Binding.constant(1)) {
+        TabView(selection: $selectedTab) {
             
             SquaredView()
                 .tabItem {

@@ -87,7 +87,6 @@
 				31EC58042D695AFE00C697DE /* SquaredView.swift */,
 				31EC580B2D695C5E00C697DE /* SumsView.swift */,
 				31EC580D2D695F2C00C697DE /* DifferencesView.swift */,
-				31EC58012D695AFE00C697DE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -95,11 +94,12 @@
 		31EC58062D695AFE00C697DE /* RevisitingInteractiveApps */ = {
 			isa = PBXGroup;
 			children = (
+				31EC58052D695AFE00C697DE /* RevisitingInteractiveAppsApp.swift */,
+				31EC58032D695AFE00C697DE /* Assets.xcassets */,
+				31EC58012D695AFE00C697DE /* Preview Assets.xcassets */,
 				314E4F132D6BBBAD00772E9F /* Model */,
 				314E4F162D6BBCF700772E9F /* ViewModel */,
 				31EC58022D695AFE00C697DE /* Preview Content */,
-				31EC58032D695AFE00C697DE /* Assets.xcassets */,
-				31EC58052D695AFE00C697DE /* RevisitingInteractiveAppsApp.swift */,
 			);
 			path = RevisitingInteractiveApps;
 			sourceTree = "<group>";
